@@ -60,7 +60,7 @@ public class SpringAngularStudentApplication {
                     int index = random.nextInt(paymentTypes.length);
                     System.out.println(index);
                     Payment payment=Payment.builder()
-                            .amount(1000+(int)(Math.random()+20000))
+                            .amount(1000+(int)(Math.random()*20000))
                             .type(paymentTypes[index])
                             .status(PaymentStatus.CREATED)
                             .date(LocalDate.now())

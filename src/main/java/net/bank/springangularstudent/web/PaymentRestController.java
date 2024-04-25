@@ -32,6 +32,7 @@ public class PaymentRestController {
     private PaymentService paymentService;
 
     @GetMapping(path = "/payments")
+    @CrossOrigin("*")
     public List<Payment> allPayments(){
         return paymentRepository.findAll();
     }
